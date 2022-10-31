@@ -31,14 +31,18 @@ Lane line detection is a crucial feature of Self-Driving Vehicles. It’s an ext
     * **Weighted image**
         * Mixing the lines from hough transformation with the original image. The resulting image is based on the following equation: initial_img * ￿ + img * ￿ + ￿
 
-3. Calculate the x coordinate of the intersection
-4. Find points with positive and negative slopes
-5. add_slope() , & handle Case of empty arrays in the main Pipeline
-6. Plot Polygon from Vertices
-7. Plot Image Processing
-8. Test images & Results
-9. Develop a Lane Detection Pipeline
-10. Test on Videos
+3. **Calculate the x coordinate of the intersection**
+4. **Find points with positive and negative slopes**
+    * *add_slope() , & handle Case of empty arrays in the main Pipeline*
+5. **Plot Polygon from Vertices**
+6. **Plot Image Processing**
+7. **Test images & Results**
+
+    ![Output-1](https://github.com/Ashleshk/lane-Detection/blob/main/output/output_37_3.png)
+
+    
+8. **Develop a Lane Detection Pipeline**
+9. **Test on Videos**
     * process on Video Stream
 
 
@@ -47,10 +51,12 @@ Lane line detection is a crucial feature of Self-Driving Vehicles. It’s an ext
 2. I had some issues with NaNs and Inf while debbuging the main pipeline.
 3. The most demanding was to stabilize the lane lines of both video streams.
 
-## Identify potential shortcomings
-1. The lane lines are straight and very stable in both video streams, however, the pipeline does not work with the challenging video. I believe that it would be also very difficult to detect the lane lines in medium to extreme environments conditions including shades, reflections, occlusions and diverse weather constraints.
+## Identified potential shortcomings
+
+The lane lines are straight and very stable in both video streams, however, the pipeline does not work with the challenging video. I believe that it would be also very difficult to detect the lane lines in medium to extreme environments conditions including shades, reflections, occlusions and diverse weather constraints.
 
 ##  Possible improvements to your pipeline
+
 1. Find a robust and stable curvature for the lane detection instead of a straigth of line.
 2. Tune the mask color parameters and split white and yellow lane lines for processing the
 challenging video.
